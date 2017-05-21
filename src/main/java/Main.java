@@ -5,6 +5,8 @@ import com.codecool.shop.controller.ProductController;
 import com.codecool.shop.login.LoginHandler;
 import com.codecool.shop.util.DbConnect;
 import com.codecool.shop.util.ExampleData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
@@ -17,6 +19,7 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
+
         String CONNECTIONCONFIGFILE="src/main/resources/connection/properties/connectionProperties.txt";
         // default server settings
         exception(Exception.class, (e, req, res) -> e.printStackTrace());
