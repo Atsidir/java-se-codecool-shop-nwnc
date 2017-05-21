@@ -1,4 +1,4 @@
 url: localhost:5432
 database: codecoolshop
-user: matyi
-password: matyi
+user: atsidir
+password: alma1989
