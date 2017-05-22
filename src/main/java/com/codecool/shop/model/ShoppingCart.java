@@ -1,33 +1,45 @@
 package com.codecool.shop.model;
+/** javadocumentation */
+
+/**
+ *@author tori
+ * */
 
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 
 public class ShoppingCart {
     int id;
     HashMap<Product, Integer> Products;
     private static int currentid = 1;
 
-
+    /**
+     * create new shoppingcart
+     * */
     public ShoppingCart() {
         this.id = currentid;
         currentid++;
         Products = new HashMap<>();
     }
 
+
+    /**
+     *  shoppingcart id,
+     *  shoppincart content(product and the number of product)
+     * */
     public ShoppingCart(int id,HashMap<Product, Integer> products) {
         this.id = id;
         this.Products = products;
     }
 
+
     public int getId() {
         return id;
     }
+
 
     Integer sizeOfProducts() {
         return this.Products.size();
@@ -59,6 +71,9 @@ public class ShoppingCart {
     }
 
 
+    /**
+     *  integer number of product in shoppingcart
+     *  */
     public int getAllProducts() {
         int count = 0;
         if (this.Products==null) {
